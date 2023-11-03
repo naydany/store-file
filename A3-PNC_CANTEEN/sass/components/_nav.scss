@@ -1,0 +1,130 @@
+@import"vairiable";
+// @import "media-queries";
+@import"responsive";
+nav {
+    color: $neutral;
+    height: 18vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    .logo {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding-left: 65px;
+        
+        img {
+            height: 60px;
+            margin-right: 40px;
+        }
+
+        h1 {
+            font-weight: bold;
+            color: $neutral;
+        }
+    } 
+  
+    @include responsive('tablet'){
+        .logo{
+            width: 30%;
+            padding-left: 40px;
+        }
+    }
+    ul {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-right: 60px;
+        li {
+           
+            a {
+                color: $neutral;
+                padding: 20px;
+                margin-right: 10px;
+            }
+            a:hover{
+                border: 1px solid red;
+            }
+            @include responsive('mobile'){
+                a{
+                    font-size: 20px;
+                }
+                
+            }
+        }
+        @include responsive('mobile'){
+            li{
+                display:block ;
+                margin: 30px 0;
+                line-height: 50px;
+            }
+        }
+    }
+    @include responsive('tablet'){
+        ul{
+            width: 70%;
+            display: flex;
+            margin-right: 40px;
+        }
+        
+    }
+    @include responsive('mobile'){
+        ul{
+            width: 60%;
+            right: -90%;
+            display: flex;
+            position: fixed;
+            background-color: black;
+            height: 50vh;
+            top: 120px;
+            text-align: center;
+            flex-direction: column;
+            transition: all .5s;
+        }
+        @include responsive('mobile'){
+            #check:checked ~ ul{
+                right: -37px;
+            }
+        }
+        
+    }
+}
+.home,
+.about,
+.contact{
+    border: 1px solid red;
+}
+label #btn,
+label #cancel{
+    color: white;
+    font-size: 30px;
+    line-height: 60px;
+    margin-right: 40px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    cursor: pointer;
+    display: none;
+}
+@include responsive('mobile'){
+    label #btn{
+        display: block;
+    }
+}
+#check{
+    display: none;
+
+}
+@include responsive('mobile'){
+    #check:checked ~ label #btn{
+        display: none;
+    }
+}
+@include responsive('mobile'){
+    #check:checked ~ label #cancel{
+        display: block;
+    }
+}

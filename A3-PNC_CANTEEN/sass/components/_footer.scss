@@ -1,0 +1,149 @@
+@import "vairiable";
+@import "responsive";
+.footer {
+    width: 20%;
+    height: 100vh;
+    padding-top: 20vh;
+    padding-left: 10vh;
+
+    .logo-pnc {
+        height: 15%;
+        img {
+            height: 50%;
+            padding-left: 3vh;
+        }
+        @include responsive('tablet'){
+            .logo-pnc img {
+                height: 25%;
+            }
+        }
+    }
+
+    @include responsive('tablet') {
+        .logo-pnc {
+            height: 100%;
+            width: 25%;
+        }
+    }
+
+    @include responsive('mobile') {
+        .logo-pnc {
+            display: none;
+        }
+    }
+    .time-ate {
+        height: 20%;
+        padding-top: 3vh;
+    }
+    
+    @include responsive('tablet') {
+        .time-ate {
+            width: 25%;
+            height: 100%;
+            padding-top: 0vh;
+        }
+    }
+    
+    @include responsive('mobile') {
+        .time-ate {
+            display: none;
+        }
+    }
+    .name-food {
+        height: 25%;
+        padding-top: 4vh;
+    }
+    
+    @include responsive('tablet') {
+        .name-food {
+            height: 100%;
+            width: 25%;
+            padding-top: 0vh;
+        }
+    }
+    
+    @include responsive('mobile') {
+        .name-food {
+            display: none;
+        }
+    }
+    .socail-media {
+        height: 20%;
+        padding-top: 15vh;
+        i {
+            padding: 8% 0% 0% 3%;
+            font-size: 30px;
+            color: $secondary;
+        }
+        @include responsive('tablet'){
+            .socail-media i {
+                padding: 0% 0% 0% 3%;
+            }
+        }
+        
+        @include responsive('mobile') {
+            .socail-media i {
+                padding: 8% 0% 0% 5%;
+            }
+        }
+        p {
+            padding-left: 7%;
+        }
+        @include responsive('mobile') {
+            .socail-media p {
+                padding-left: 11%;
+            }
+        }
+    }
+    
+    @include responsive('tablet') {
+        .socail-media {
+            height: 100%;
+            width: 25%;
+            padding-top: 0vh;
+        }
+    }
+    
+    @include responsive('mobile') {
+        .socail-media {
+            width: 90%;
+            height: 50%;
+        }
+    }
+}
+
+@include responsive('tablet') {
+    .footer {
+        display: flex;
+        height: 30vh;
+        width: 100%;
+        padding-top: 5vh;
+        padding-left: 5vh;
+        border-top: 2px solid $thirdcolor;
+    }
+}
+
+@include responsive('mobile') {
+    .footer {
+        padding-left: 12vh;
+        padding-top: 2vh;
+        height: 20vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

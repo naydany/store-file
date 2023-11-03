@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+header {
+    width: 100%;
+    padding-top: 18vh;
+    color: $neutral;
+    height: 620px;
+    background-image: url(../images/photo_2023-09-24_10-59-29.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+    .bg-img {
+        background-color: rgba(15, 13, 13, 0.309);
+        width: 100%;
+        height: 100%;
+    }
+
+    h3 {
+        padding: 60px 0 30px 60px;
+
+        .bold {
+            font-size: 25px;
+            color: $mainBrandColor;
+        }
+    }
+
+    .p-head {
+        width: 100%;
+    }
+
+    .content-par {
+        width: 50%;
+        padding-left: 60px;
+        font-size: small;
+        text-align: justify;
+    }
+
+    @include responsive('tablet') {
+        .content-par {
+            padding-left: 40px;
+            padding-top: 10px;
+        }
+
+        h3 {
+            padding: 50px 0 30px 40px;
+        }
+    }
+
+    @include responsive('tablet') {
+        .content-par {
+            width: 70%;
+        }
+    }
+
+    @include responsive('mobile') {
+        .content-par {
+            width: 90%;
+        }
+    }
+
+    .box-header {
+        display: flex;
+        width: 90%;
+        margin-left: 65px;
+        margin-top: 4%;
+
+        .box1 {
+            width: 49%;
+            .box-content1 {
+                width: 100%;
+                background-color: rgba(242, 243, 245, 0.414);
+                border-top: 8px solid #545479;
+                height: 220px;
+                padding: 20px;
+
+                img {
+                    width: 60px;
+                }
+
+                span {
+                    font-family: 'Dancing Script', cursive;
+                    font-size: 25px;
+                    margin-bottom: 10px;
+                    color: $mainBrandColor;
+                    padding-bottom: 20px;
+                }
+
+                h5 {
+                    margin-top: 5px;
+                    color: black;
+                    text-align: justify;
+                }
+            }
+            .box-content1:hover {
+                background-color:
+                    #545479;
+                transition: all .4s linear;
+            }
+        }
+
+        
+
+        .box2 {
+            width: 49%;
+            .box-content2 {
+                width: 100%;
+                background-color: rgba(242, 243, 245, 0.414);
+                border-top: 8px solid #31697D;
+
+                height: 220px;
+                padding: 25px;
+
+                img {
+                    width: 60px;
+                }
+
+                span {
+                    font-family: 'Dancing Script', cursive;
+                    font-size: 25px;
+                    margin-bottom: 10px;
+                    color: $mainBrandColor;
+                }
+
+                h5 {
+                    margin-top: 5px;
+                    color: $thirdcolor;
+                    text-align: justify;
+                }
+            }
+            .box-content2:hover {
+                background-color: #31697D;
+                transition: all .4s linear;
+            }
+        }
+    }
+
+    // @include responsive('tablet') {
+    //     margin-top: 40px;
+    // }
+
+    @include responsive('tablet') {
+        .box-header {
+            margin-left: 40px;
+        }
+    }
+}
+
+@include responsive('tablet') {
+    header {
+        height: 780px;
+    }
+}

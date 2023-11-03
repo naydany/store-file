@@ -1,0 +1,223 @@
+@import"group-mixin";
+@import"vairiable";
+@import"responsive";
+
+.content-cards {
+    height: 620px;
+    background-color: rgba(0, 0, 0, 0.086);
+
+    h3 {
+        color: $primaryDark;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
+
+    p {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 70px;
+        flex-wrap: wrap;
+
+        .content-card1,
+        .content-card2,
+        .content-card3,
+        .content-card4,
+        .content-card5,
+        .content-card6,
+        .content-card7,
+        .content-card8 {
+            position: relative;
+            width: 250px;
+            height: 120px;
+            // background-color: #1c767163;
+            // background-color: #1c6b6763;
+            background-color: #06434063;
+            margin-top: 80px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.18);
+            border-radius: 10px 10px 10px 10px;
+            cursor: pointer;
+            transition: 0.3s;
+
+            .card-image1 {
+                @include cencered;
+                background-image: url(/images/Tik-krerng.jpg);
+                button{
+                    transform: translateY(120px);
+                    margin-left: 20px;
+                    height: 35px;
+                    width: 70px;
+                }
+                button:hover{
+                    opacity: 0;
+                    
+                }
+            }
+
+            .card1 {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transform: translateY(-200px);
+                opacity: 0;
+                transition: 0.3s;
+                h4 {
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .price {
+                    display: flex;
+                    justify-content: center;
+                    color: $mainBrandColor;
+                    
+                }
+
+                .quality {
+                    display: flex;
+                    transition: .0.3;
+
+                    img {
+                        width: 50px;
+
+                    }
+
+                    .price {
+                        margin-top: 20px;
+
+                    }
+                }
+
+            }
+
+            .card-image2 {
+                @include cencered;
+                background-image: url(/images/cha-sondekkur.jpg);
+            }
+
+            .card-image3 {
+                @include cencered;
+                background-image: url(/images/bay-sachjrouk.jpeg);
+            }
+
+            .card-image4 {
+                @include cencered;
+                background-image: url(/images/char-misur.jpg);
+            }
+
+            .card-image5 {
+                @include cencered;
+                background-image: url(/images/broher.jpg);
+            }
+
+            .card-image6 {
+                @include cencered;
+                background-image: url(/images/cha\ mtes\ plouk.jpg);
+            }
+
+            .card-image7 {
+                @include cencered;
+                background-image: url(/images/mjou\ krerng.jpg);
+            }
+
+            .card-image8 {
+                @include cencered;
+                background-image: url(/images/sweet.jpg);
+            }
+
+            // @include tablet{
+            //     .card-image1,
+            //     .card-image2,
+            //     .card-image3{
+            //         width: 68%;
+            //         height: 13vh;
+            //         transform: translateY(-50px);
+            //         margin-left: 38px;
+            //         background-repeat: no-repeat;
+            //         background-size: cover;
+            //     }
+            // }
+        }
+
+        @include responsive('tablet') {
+
+            .content-card1,
+            .content-card2,
+            .content-card3,
+            .content-card4,
+            .content-card5,
+            .content-card6,
+            .content-card7,
+            .content-card8 {
+                width: 300px;
+                margin-top: 100px;
+            }
+        }
+
+        // .content-card5,
+        // .content-card6,
+        // .content-card7,
+        // .content-card8 {
+        //     margin-top: 100px;
+        // }
+
+        .content-card1:hover,
+        .content-card2:hover,
+        .content-card3:hover,
+        .content-card4:hover,
+        .content-card5:hover,
+        .content-card6:hover,
+        .content-card7:hover,
+        .content-card8:hover {
+            height: 30vh;
+
+            .card1 {
+                opacity: 1;
+                transform: translateY(-9px);
+            }
+        }
+
+        @include responsive('tablet') {
+            .content-card1:hover,
+            .content-card2:hover,
+            .content-card3:hover,
+            .content-card4:hover,
+            .content-card5:hover,
+            .content-card6:hover {
+                height: 20vh;
+            }
+        }
+
+
+    }
+
+    @include responsive('tablet') {
+
+        .content-card7,
+        .content-card8 {
+            display: none;
+        }
+
+        .content-card1,
+        .content-card2,
+        .content-card3 {
+            width: 190px;
+            height: 200px;
+        }
+    }
+
+}
+
+@include responsive('tablet'){
+    .content-cards{
+        height: 870px;
+    }
+}
